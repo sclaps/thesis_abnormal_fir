@@ -1,0 +1,32 @@
+RELEVANT_COLUMNS = [          #need something to calculate planned vs actual TMA duration
+    "flight_leg_key",
+    "fl_aircraft_type",
+    "fl_aircraft_registration",
+    "fl_flight_product",
+    "fl_flight_number",
+    "fl_flight_code",
+    "fl_airline",
+    "fl_city_pair",
+    "fl_direction",
+    "fl_departure_airport",
+    "fl_departure_airport_icao_code", 
+    "fl_departure_airport_latitude", 
+    "fl_departure_airport_longitude", 
+    "fl_scheduled_departure_date",
+    "fl_scheduled_departure_date_utc",
+    "fl_actual_arrival_airport", 
+    "fl_planned_arrival_airport", 
+    "fl_arrival_airport_icao_code", 
+    "fl_arrival_airport_latitude", 
+    "fl_arrival_airport_longitude", 
+    "fl_scheduled_arrival_date_utc",
+    "fl_season",
+    "fp_flight_plan_version", 
+    "fp_flight_plan_timestamp_utc",
+    "fp_cost_index",
+    "fp_ground_distance_nm",
+    "fl_great_circle_distance_nm",
+]
+
+def select_columns(df):
+    return df[RELEVANT_COLUMNS]
